@@ -1,0 +1,161 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;    
+  background-color: hsl(30, 38%, 92%);
+  margin: 0;
+  font-family: 'Outfit', sans-serif;  
+}
+
+.container {
+  display: flex;
+  justify-content: center; 
+  margin: 85px 27px;  
+  width: 375px;
+  max-width: 100%;      
+}
+
+@media (min-width:768px) {
+  .container {
+      margin: 152px 0;
+      width: 600px;
+      max-width: 1440px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 343px;  
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 605px;
+    flex-direction: row;
+  }  
+}
+
+.card-img .mobile {
+  display: block;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.card-img .desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .card-img .mobile {
+    display: none;
+  }
+
+  .card-img .desktop {
+    display: block;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+
+.card-text {
+  padding: 26px;
+  background-color: hsl(0, 0%, 100%);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; 
+}
+
+@media (min-width:768px) {
+  .card-text {
+    width: 90%;
+    padding: 30px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; 
+  }
+}
+
+.card-text .perfume {
+  font-size: 14px;
+  letter-spacing: 5px;
+  color: hsl(228, 12%, 48%);
+}
+
+.card-text h3 {
+  font-size: 28px;
+  font-family: 'Fraunces', serif;
+  margin: 20px 0 25px 0;
+}
+
+@media (min-width:768px) {
+  .card-text h3 {
+    padding-right: 30px;
+  }
+}
+
+.card-text p {
+  font-size: 14px;
+  margin-bottom: 23px;
+  padding-right: 28px;
+  line-height: 1.8;
+  color: hsl(228, 12%, 48%);
+}
+
+.price {
+  margin-bottom: 23px;
+}
+
+.price .new {
+  color: hsl(158, 36%, 37%);
+  font-size: 28px;
+  font-family: 'Fraunces', serif;
+  margin-right: 18px;
+}
+
+.price .old {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+
+.card-text button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  font-weight: 700;
+  
+  background-color: hsl(158, 36%, 37%);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.card-text button:hover {
+  background-color: hsl(212, 21%, 14%);
+}
+
+
+
